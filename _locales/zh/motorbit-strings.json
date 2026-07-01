@@ -1,5 +1,6 @@
 {
     "motorbit|block": "Motor:Bit",
+    "motorbit.setPin|block": "向引脚|%index|数字写入值|%value",
     "motorbit.Servo|block": "9G舵机|%index|角度|%degree",
     "motorbit.Servospeed|block": "9G舵机 Servo|%index|开始角度 %degree1|结束角度 %degree2|旋转速度 %speed",
     "motorbit.EM_GeekServo|block": "Geekservo|9g舵机|%index|角度 %degree",

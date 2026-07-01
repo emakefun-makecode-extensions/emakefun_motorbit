@@ -190,6 +190,22 @@ namespace motorbit {
     /**
      * Servo Execute
      * @param index Servo Channel; eg: S1
+     * @param value [HIGH/LOW] eg: 1
+    */
+    //% blockId=motorbit_pin block="Pin|%index|level|%value"
+    //% group="Pin" weight=100
+    //% value.defl=1
+    //% value.min=0 value.max=1
+    export function setPin(index: Servos, value: number): void {
+        if (!initialized) {
+            initPCA9685()
+        }
+        setPwm(index + 7, 0, value == 1 ? 4095 : 0);
+    }
+
+    /**
+     * Servo Execute
+     * @param index Servo Channel; eg: S1
      * @param degree [0-180] degree of servo; eg: 0, 90, 180
     */
     //% blockId=motorbit_servo block="Servo|%index|degree|%degree"
